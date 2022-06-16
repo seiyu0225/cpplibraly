@@ -33,3 +33,12 @@ vector<int> osa_k(int n)
     return res;
 }
 
+map<int, int> prime_fact(vector<int>& spf, int t) {
+    map<int, int> mii;
+    int now = t;
+    while(now != 1) {
+        mii[spf[now]]++;
+        now /= spf[now];
+    }
+    return mii;
+}
